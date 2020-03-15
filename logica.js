@@ -11,7 +11,7 @@ function llamarJson() {
         function(data) {
             console.log(data.items);
             $.each(data.items, function(index, items) {
-                $("#tb").html($("#tb").html() + "<tr><td>" + items.title + "</td><td><img src='" + items.media.m + "'/></td><td>" + items.date_taken + "</td><td>" + items.author + "</td><td>" + drawTags(items.tags) + "</td><td><a href='" + items.link + "'>Link</a></td></tr>");
+                $("#tb").html($("#tb").html() + "<tr><td>" + items.title + "</td><td><img src='" + items.media.m + "'/></td><td>" + items.date_taken + "</td><td>" + items.author + "</td><td>" + drawTags(items.tags) + "</td><td><a class='btn btn-primary' href='" + items.link + "'>Link</a></td></tr>");
                 console.log(items.tags);
             });
         }
