@@ -12,35 +12,40 @@
 </head>
 
 <body>
-    <form>
-        <div class="form-group" class="mx-auto" style="width: 300px;">
-            <label for="exampleFormControlInput1">Escriba sus tags separadas por espacios:</label>
-            <input type="" class="form-control" id="tags" placeholder="pelota playa">
+    <form class="mx-auto" style="width: 500px;">
+        <div>
+            <label for="exampleFormControlInput1">Escribe tus tags:</label>
         </div>
-        <div class="form-group" class="mx-auto" style="width: 400px;">
+        <div class="input-group mb-3">
+            <br>
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button" onclick="llamarJson()">Button</button>
+            </div>
+            <input type="text" id="tags" class="form-control" placeholder="pelota playa arena" aria-label="" aria-describedby="basic-addon1">
+        </div>
+        <div class="form-group">
             <label for="exampleFormControlSelect1">Example select</label>
             <select class="form-control" id="select">
-            <option value="all">Usar todas las tags</option>
-            <option value="any">Usar solo algunas tags</option>
+                <option value="all">Usar todas las etiquetas</option>
+                <option value="any">Usar algunas etiquetas</option>
             </select>
         </div>
-        <div>
-            <button onclick="llamarJson()" class="btn btn-outline-secondary">Filtrar</button>
-        </div>
     </form>
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Media</th>
-                <th scope="col">Date</th>
-                <th scope="col">Author</th>
-                <th scope="col">Tags</th>
-                <th scope="col">Link</th>
-            </tr>
-        </thead>
-        <tbody id="tb"> </tbody>
-    </table>
+    <div class="mx-auto" style="width: 1600px;">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Media</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Tags</th>
+                    <th scope="col">Link</th>
+                </tr>
+            </thead>
+            <tbody id="tb"> </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
