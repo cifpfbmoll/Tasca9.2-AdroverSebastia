@@ -18,6 +18,10 @@ function llamarJson() {
     );
 }
 
+function vaciar() {
+    $("#tb").html(" ");
+}
+
 function drawTags(tags) {
     let arr = tags.split(' ');
     let words = "";
