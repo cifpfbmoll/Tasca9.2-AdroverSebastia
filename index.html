@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!--Importaciones y metadatos-->
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,17 +13,19 @@
 </head>
 
 <body>
+    <!--Formulario centrado y con ancho de 500 pixels-->
     <form class="mx-auto" style="width: 500px;">
         <div>
             <label for="exampleFormControlInput1">Escribe tus tags:</label>
         </div>
+        <!--Botón que agrega las filas a la tabla junto a la barra para especificar las etiquetas-->
         <div class="input-group mb-3">
-            <br>
             <div class="input-group-prepend">
                 <button class="btn btn-outline-secondary" type="button" onclick="llamarJson()">Filtrar</button>
             </div>
             <input type="text" id="tags" class="form-control" placeholder="pelota playa arena" aria-label="" aria-describedby="basic-addon1">
         </div>
+        <!--Desplegable para indicar el modo de uso de las tags-->
         <div class="form-group">
             <label for="exampleFormControlSelect1">Seleccione tipo de busqueda</label>
             <select class="form-control" id="select">
@@ -30,15 +33,18 @@
                 <option value="any">Usar algunas etiquetas</option>
             </select>
         </div>
+        <!--Botón para limpiar la tabla-->
         <div>
             <button type="button" class="btn btn-danger" onclick="vaciar()">Limpiar</button>
         </div>
     </form>
     <br><br><br>
+    <!--Tabla donde añadimos los elementos-->
     <div class="mx-auto" style="width: 1600px;">
         <table class="table">
             <thead class="thead-dark">
                 <tr>
+                    <!--Indicadores de las elemntos a agregar de la tabla-->
                     <th scope="col">Title</th>
                     <th scope="col">Media</th>
                     <th scope="col">Date</th>
@@ -47,6 +53,7 @@
                     <th scope="col">Link</th>
                 </tr>
             </thead>
+            <!--Cuerpo de la tabla donde se añadiran los elementos-->
             <tbody id="tb"> </tbody>
         </table>
     </div>
