@@ -5,6 +5,10 @@ Devuelve la url.
 */
 
 function buildURL() {
+    /**
+     * Cada vez que se construye la url se limpia la tabla
+     */
+    vaciar();
     let url = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=?&tags=' + $('#tags').val().split(' ').join() + '&tagmode=' + $('#select').val();
     console.log(url);
     return url;
